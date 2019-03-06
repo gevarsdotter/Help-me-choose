@@ -14,6 +14,10 @@
       </div>
       <button class="addOption">Add</button>
     </div>
+
+    <div class="resultSection">
+    </div>
+
     <button>Go!</button>
     <input type="date" id="myDate" value="2019-03-05">
     <form action="/action_page.php">
@@ -21,5 +25,16 @@
   Last name: <input type="text" name="LastName" value="Gevarsdotter"><br>
   <input type="submit" value="Submit">
     </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+<script>
+$(function(){
+  $('.resultSection').hide()
+  var add_option = function() {
+    $('.inputs').append('<input></input>')
+  }
+  $('.addOption').click(add_option)
+})
+</script>
   </body>
 </html>
